@@ -10,5 +10,6 @@ terminal.
 - Only scrollback using keys, as mouse scrollback it's unnecessary and can be
 achieved by using other tools as tmux.
 - A vim-like keys, to facilitate easy movement through the terminal and text.
+- A dracula color scheme.
 
 Build based on __st 0.8.3__.

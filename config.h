@@ -1,11 +1,4 @@
-/*
-  Based on st 0.8.3
-  Features:
-    - Has transparency
-    - Has scroll back with keys
-    - Keys have pseudo-vim like behavior.
- */
-
+/* Based on st 0.8.3 */
 
 /* FONTS */
 static char *font = "DejaVu Sans Mono:pixelsize=14:antialias=true:autohint=true";
@@ -36,7 +29,7 @@ static Shortcut shortcuts[] = {
 static const char *colorname[] = {
 	/* 8 normal colors */
     "#000000",
-	"#FF5555",
+    "#FF5555",
 	"#50FA7B",
 	"#F1FA8C",
 	"#BD93D9",

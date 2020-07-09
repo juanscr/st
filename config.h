@@ -1,7 +1,7 @@
 /* Based on st 0.8.3 */
 
 /* FONTS */
-static char *font = "DejaVu Sans Mono:pixelsize=14:antialias=true:autohint=true";
+static char *font = "DejaVu Sans Mono:pixelsize=15:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /* TRANSPARENCY VALUE */

@@ -1,4 +1,4 @@
-/* Based on st 0.8.3 */
+/* Based on st 0.8.4 */
 
 /* FONTS */
 static char *font = "DejaVu Sans Mono:pixelsize=15:antialias=true:autohint=true";
@@ -65,6 +65,18 @@ unsigned int defaultbg = 257;
 static unsigned int defaultcs = 258;
 static unsigned int defaultrcs = 0;
 
+/*
+ * Added shift to scroll with mouse wheel.
+ */
+static MouseShortcut mshortcuts[] = {
+	/* mask                 button   function        argument       release */
+    { ShiftMask,            Button4, kscrollup,      {.i = 1} },
+    { ShiftMask,            Button5, kscrolldown,    {.i = 1} },
+	{ XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
+	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
+	{ XK_ANY_MOD,           Button5, ttysend,        {.s = "\005"} },
+};
+
 /* AUTOMATIC STUFF */
 
 /*
@@ -102,9 +114,18 @@ static unsigned int tripleclicktimeout = 600;
 /* alt screens */
 int allowaltscreen = 1;
 
-/* frames per second st should at maximum draw to the screen */
-static unsigned int xfps = 120;
-static unsigned int actionfps = 30;
+/* allow certain non-interactive (insecure) window operations such as:
+   setting the clipboard text */
+int allowwindowops = 0;
+
+/*
+ * draw latency range in ms - from new content/keypress/etc until drawing.
+ * within this range, st draws when content stops arriving (idle). mostly it's
+ * near minlatency, but it waits longer for slow updates to avoid partial draw.
+ * low minlatency will tear/flicker more, as it can "detect" idle too early.
+ */
+static double minlatency = 8;
+static double maxlatency = 33;
 
 /*
  * blinking timeout (set to 0 to disable blinking) for the terminal blinking
@@ -178,15 +199,6 @@ static unsigned int defaultattr = 11;
  * modifier, set to 0 to not use it.
  */
 static uint forcemousemod = ShiftMask;
-
-/*
- * Internal mouse shortcuts.
- * Beware that overloading Button1 will disable the selection.
- */
-static MouseShortcut mshortcuts[] = {
-	/* mask                 button   function        argument       release */
-	{ XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
-};
 
 /*
  * Special keys (change & recompile st.info accordingly)

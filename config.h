@@ -27,32 +27,32 @@ static Shortcut shortcuts[] = {
 
 /* Dracula color scheme */
 static const char *colorname[] = {
-	/* 8 normal colors */
+    /* 8 normal colors */
     "#000000",
     "#FF5555",
-	"#50FA7B",
-	"#F1FA8C",
-	"#BD93D9",
-	"#FF79C6",
-	"#8BE9FD",
-	"#BFBFBF",
+    "#50FA7B",
+    "#F1FA8C",
+    "#BD93D9",
+    "#FF79C6",
+    "#8BE9FD",
+    "#BFBFBF",
 
-	/* 8 bright colors */
-	"#4D4D4D",
-	"#FF6E67",
-	"#5AF78E",
-	"#F4F99D",
-	"#CAA9FA",
-	"#FF92D0",
-	"#9AEDFE",
-	"#E6E6E6",
+    /* 8 bright colors */
+    "#4D4D4D",
+    "#FF6E67",
+    "#5AF78E",
+    "#F4F99D",
+    "#CAA9FA",
+    "#FF92D0",
+    "#9AEDFE",
+    "#E6E6E6",
 
-	[255] = 0,
+    [255] = 0,
 
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#f8f8f2",
-	"#282a36",
-	"#bbc5ff",
+    /* more colors can be added after 255 to use with DefaultXX */
+    "#f8f8f2",
+    "#282a36",
+    "#bbc5ff",
 };
 
 

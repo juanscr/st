@@ -1,7 +1,7 @@
 /* Based on st 0.8.4 */
 
 /* FONTS */
-static char *font = "DejaVu Sans Mono:pixelsize=15:antialias=true:autohint=true";
+static char *font = "JetBrains Mono:size=13:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /* TRANSPARENCY VALUE */
@@ -14,9 +14,9 @@ float alpha = 0.95;
 static Shortcut shortcuts[] = {
 	/* mask                 keysym          function        argument */
 	{ XK_ANY_MOD,           XK_Break,       sendbreak,      {.i =  0} },
-	{ ControlMask,          XK_plus,        zoom,           {.f = +2} },
+	{ TERMMOD,              XK_plus,        zoom,           {.f = +2} },
 	{ ControlMask,          XK_minus,       zoom,           {.f = -2} },
-	{ ControlMask,          XK_r,           zoomreset,      {.f =  0} },
+	{ TERMMOD,              XK_0,           zoomreset,      {.f =  0} },
 	{ ControlMask,          XK_y,           clipcopy,       {.i =  0} },
 	{ ControlMask,          XK_p,           clippaste,      {.i =  0} },
 	{ MODKEY,               XK_j,           kscrolldown,    {.i =  1} },

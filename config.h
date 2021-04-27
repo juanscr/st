@@ -1,13 +1,7 @@
 /* Based on st 0.8.4 */
 
 /* FONTS */
-static char *font = "JetBrains Mono:size=13:antialias=true:autohint=true";
-
-static char *font2[] = {
-/*	"Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true", */
-/*	"Hack Nerd Font Mono:pixelsize=11:antialias=true:autohint=true", */
-};
-
+static char *font = "JetBrainsMono Nerd Font:size=13:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /* TRANSPARENCY VALUE */
@@ -76,8 +70,8 @@ static unsigned int defaultrcs = 0;
  */
 static MouseShortcut mshortcuts[] = {
     /* mask                 button   function        argument       release */
-    { ShiftMask,            Button4, kscrollup,      {.i = 5} },
-    { ShiftMask,            Button5, kscrolldown,    {.i = 5} },
+    { MODKEY,               Button4, kscrollup,      {.i = 5} },
+    { MODKEY,               Button5, kscrolldown,    {.i = 5} },
     { XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
     { XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
     { XK_ANY_MOD,           Button5, ttysend,        {.s = "\005"} },

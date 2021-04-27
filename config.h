@@ -70,8 +70,8 @@ static unsigned int defaultrcs = 0;
  */
 static MouseShortcut mshortcuts[] = {
     /* mask                 button   function        argument       release */
-    { ShiftMask,            Button4, kscrollup,      {.i = 5} },
-    { ShiftMask,            Button5, kscrolldown,    {.i = 5} },
+    { MODKEY,               Button4, kscrollup,      {.i = 5} },
+    { MODKEY,               Button5, kscrolldown,    {.i = 5} },
     { XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
     { XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
     { XK_ANY_MOD,           Button5, ttysend,        {.s = "\005"} },

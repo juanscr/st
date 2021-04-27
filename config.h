@@ -2,12 +2,6 @@
 
 /* FONTS */
 static char *font = "JetBrainsMono Nerd Font:size=13:antialias=true:autohint=true";
-
-static char *font2[] = {
-/*	"Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true", */
-/*	"Hack Nerd Font Mono:pixelsize=11:antialias=true:autohint=true", */
-};
-
 static int borderpx = 2;
 
 /* TRANSPARENCY VALUE */
